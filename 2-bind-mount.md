@@ -18,20 +18,40 @@ docker run -d --name <nombre contenedor> --mount type=bind,source=<ruta carpeta 
 ![Volúmenes](volumen-host.PNG)
 # COMPLETAR CON EL COMANDO
 
+```
+docker run -d -P --name Contenedor3 -v "C:\Users\salma\OneDrive\Documentos\nginx\html":/usr/share/nginx/html nginx:alpine
+```
+
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+```
+Cunado entro al localhost:32770 lo que me sale es 403 Forbidden, lo que significa que el servidor si esta corriendo pero no tiene
+los permisos suficientes o no encuentra un archivo. 
+```
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+```
+Lo que paso con ese archivo es que Nginx no pudo acceder a este o porque no existe o no puede entrar, debido a 403 Forbidden.  
+```
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 
+```
+Ahora con el template dentro de la carpeta html, se observa la página con el template descargado y ya no aparece el texto 403 Forbidden 
+```
+
 ### Eliminar el contenedor
 # COMPLETAR CON EL COMANDO
+```
+docker rm -f Contenedor3
+```
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-
+```
+Al crear nuevamente el contenedor con el mismo directorio se muestra el template que se ha descargado previamente. 
+```
 
